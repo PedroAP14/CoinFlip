@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coinflip.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="moeda.png"
+                HeightRequest="185"
+                Aspect="AspectFit" />
+
+            <Label
+                Text="Cara ou Coroa?"
+                HorizontalOptions="Center"
+                FontSize="30"/>
+
+            <Label
+                Text="Escolha um lado e aperte o botão para sortear a moeda." 
+                HorizontalOptions="Center"
+                FontSize="20"/>
+
+            <Picker 
+                x:Name="MoedaLadoPicker"
+                Title=""
+                FontSize="15">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Cara</x:String>
+                        <x:String>Coroa</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="JogarMoedaButton"
+                Text="Jogar Moeda" 
+                Clicked="JogarMoedaButton_Clicked"
+                FontSize="18"/>
+
+            <Label
+                x:Name="ResultadoLabel"
+                Text="" 
+                HorizontalOptions="Center"
+                FontSize="25"/>
+
+            <Label
+                x:Name="PontuacaoLabel"
+                Text="" 
+                HorizontalOptions="Center"
+                FontSize="18"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
